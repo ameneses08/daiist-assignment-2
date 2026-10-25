@@ -1,0 +1,150 @@
+{
+  "inputs": {
+    "cost_fp": 0.85,
+    "cost_fn": 7.5,
+    "cost_tp": 0.0,
+    "cost_tn": 0.0,
+    "base_rate": 0.03,
+    "cases": 1000,
+    "subset": "full",
+    "test_images": 400,
+    "test_rotten": 198
+  },
+  "chosen_threshold": 0.04,
+  "at_chosen_threshold": {
+    "recall": 1.0,
+    "false_alarm_rate": 0.0099,
+    "precision": 0.7575,
+    "TP": 30.0,
+    "FN": 0.0,
+    "FP": 9.604,
+    "TN": 960.396,
+    "cost": 8.1634
+  },
+  "same_threshold_on_other_subset": 0.0,
+  "baselines_per_1000": {
+    "pass_everything (do nothing / trivial / COCO zero-shot)": 225.0,
+    "reject_everything": 824.5,
+    "perfect_model": 0.0
+  },
+  "saving_vs_pass_everything": 216.8,
+  "theory_threshold_if_scores_were_probabilities": 0.102,
+  "threshold_stays_best_while": {
+    "cost_fn_between": [
+      4.25,
+      30.0
+    ],
+    "base_rate_between": [
+      0.02,
+      0.2
+    ]
+  },
+  "bootstrap": {
+    "cost_at_chosen_95ci": [
+      0.0,
+      20.4
+    ],
+    "best_threshold_95ci": [
+      0.02,
+      0.52
+    ]
+  },
+  "sensitivity": [
+    {
+      "base_rate": 0.01,
+      "cost_fn": 3.75,
+      "best_threshold": 0.52,
+      "min_cost": 5.1,
+      "pass_all_cost": 37.5,
+      "saving_vs_pass_all": 32.4
+    },
+    {
+      "base_rate": 0.01,
+      "cost_fn": 7.5,
+      "best_threshold": 0.52,
+      "min_cost": 6.1,
+      "pass_all_cost": 75.0,
+      "saving_vs_pass_all": 68.9
+    },
+    {
+      "base_rate": 0.01,
+      "cost_fn": 15.0,
+      "best_threshold": 0.52,
+      "min_cost": 8.0,
+      "pass_all_cost": 150.0,
+      "saving_vs_pass_all": 142.0
+    },
+    {
+      "base_rate": 0.03,
+      "cost_fn": 3.75,
+      "best_threshold": 0.52,
+      "min_cost": 6.9,
+      "pass_all_cost": 112.5,
+      "saving_vs_pass_all": 105.6
+    },
+    {
+      "base_rate": 0.03,
+      "cost_fn": 7.5,
+      "best_threshold": 0.04,
+      "min_cost": 8.2,
+      "pass_all_cost": 225.0,
+      "saving_vs_pass_all": 216.8
+    },
+    {
+      "base_rate": 0.03,
+      "cost_fn": 15.0,
+      "best_threshold": 0.04,
+      "min_cost": 8.2,
+      "pass_all_cost": 450.0,
+      "saving_vs_pass_all": 441.8
+    },
+    {
+      "base_rate": 0.05,
+      "cost_fn": 3.75,
+      "best_threshold": 0.04,
+      "min_cost": 8.0,
+      "pass_all_cost": 187.5,
+      "saving_vs_pass_all": 179.5
+    },
+    {
+      "base_rate": 0.05,
+      "cost_fn": 7.5,
+      "best_threshold": 0.04,
+      "min_cost": 8.0,
+      "pass_all_cost": 375.0,
+      "saving_vs_pass_all": 367.0
+    },
+    {
+      "base_rate": 0.05,
+      "cost_fn": 15.0,
+      "best_threshold": 0.04,
+      "min_cost": 8.0,
+      "pass_all_cost": 750.0,
+      "saving_vs_pass_all": 742.0
+    },
+    {
+      "base_rate": 0.1,
+      "cost_fn": 3.75,
+      "best_threshold": 0.04,
+      "min_cost": 7.6,
+      "pass_all_cost": 375.0,
+      "saving_vs_pass_all": 367.4
+    },
+    {
+      "base_rate": 0.1,
+      "cost_fn": 7.5,
+      "best_threshold": 0.04,
+      "min_cost": 7.6,
+      "pass_all_cost": 750.0,
+      "saving_vs_pass_all": 742.4
+    },
+    {
+      "base_rate": 0.1,
+      "cost_fn": 15.0,
+      "best_threshold": 0.04,
+      "min_cost": 7.6,
+      "pass_all_cost": 1500.0,
+      "saving_vs_pass_all": 1492.4
+    }
+  ]
+}

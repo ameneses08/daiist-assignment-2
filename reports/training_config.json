@@ -1,0 +1,21 @@
+{
+  "dataset": {
+    "workspace": "fruit-pnemw",
+    "project": "fruit-jmtdq",
+    "version": 1
+  },
+  "model": "yolo11n.pt",
+  "epochs": 30,
+  "patience": 10,
+  "imgsz": 640,
+  "batch": 16,
+  "seed": 0,
+  "device": "mps",
+  "machine": "Darwin arm64",
+  "torch": "2.11.0",
+  "training_minutes": 72.7,
+  "epochs_completed": 30,
+  "best_epoch": 29,
+  "best_val_mAP50-95": 0.6562,
+  "best_val_mAP50": 0.7853
+}

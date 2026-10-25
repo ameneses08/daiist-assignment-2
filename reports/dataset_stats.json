@@ -1,0 +1,75 @@
+{
+  "dataset": {
+    "workspace": "fruit-pnemw",
+    "project": "fruit-jmtdq",
+    "version": 1
+  },
+  "classes": [
+    "Fresh",
+    "Rotten"
+  ],
+  "images_per_split": {
+    "train": {
+      "images": 1200,
+      "no_labels": 5,
+      "with_Fresh": 688,
+      "with_Rotten": 592
+    },
+    "val": {
+      "images": 400,
+      "no_labels": 2,
+      "with_Fresh": 227,
+      "with_Rotten": 195
+    },
+    "test": {
+      "images": 400,
+      "no_labels": 0,
+      "with_Fresh": 222,
+      "with_Rotten": 198
+    }
+  },
+  "instances_per_class": {
+    "Fresh": {
+      "train": 734,
+      "val": 233,
+      "test": 243
+    },
+    "Rotten": {
+      "train": 3582,
+      "val": 1112,
+      "test": 1129
+    }
+  },
+  "box_area_pct_percentiles": {
+    "Fresh": {
+      "5%": 16.44,
+      "25%": 57.251,
+      "50%": 70.163,
+      "75%": 78.753,
+      "95%": 87.667
+    },
+    "Rotten": {
+      "5%": 0.066,
+      "25%": 0.189,
+      "50%": 0.576,
+      "75%": 2.752,
+      "95%": 66.245
+    }
+  },
+  "size_buckets_pct": {
+    "Fresh": {
+      "small": 0.0,
+      "medium": 0.08,
+      "large": 99.92
+    },
+    "Rotten": {
+      "small": 32.35,
+      "medium": 40.72,
+      "large": 26.93
+    }
+  },
+  "near_duplicates": {
+    "val": 57,
+    "test": 57
+  }
+}

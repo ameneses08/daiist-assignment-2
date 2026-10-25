@@ -1,0 +1,105 @@
+{
+  "inputs": {
+    "hands_per_day": 50000,
+    "seconds_per_check": 5,
+    "cost_per_hour": 14.3,
+    "shift_hours": 8,
+    "cost_per_check": 0.0199,
+    "reviewer_assumed_correct": true,
+    "base_rate": 0.03,
+    "cost_fp": 0.85,
+    "cost_fn": 7.5
+  },
+  "cheapest_band": {
+    "t_low": 0.04,
+    "t_high": 0.69
+  },
+  "chosen_band": {
+    "t_low": 0.04,
+    "t_high": 0.8,
+    "why": "high line raised above the cheapest value, which was fitted to a single test image"
+  },
+  "policies": {
+    "Pass everything (no inspection)": {
+      "t_low": 1.01,
+      "t_high": 1.01,
+      "missed_per_1000": 30.0,
+      "false_alarms_per_1000": 0.0,
+      "reviews_per_1000": 0.0,
+      "review_share": 0.0,
+      "error_cost_per_1000": 225.0,
+      "labour_cost_per_1000": 0.0,
+      "cost_per_1000": 225.0,
+      "cost_per_day": 11250.0,
+      "reviews_per_day": 0.0,
+      "review_hours_per_day": 0.0,
+      "people_needed": 0.0
+    },
+    "Person checks every hand": {
+      "t_low": 0.0,
+      "t_high": 1.01,
+      "missed_per_1000": 0.0,
+      "false_alarms_per_1000": 0.0,
+      "reviews_per_1000": 1000.0,
+      "review_share": 1.0,
+      "error_cost_per_1000": 0.0,
+      "labour_cost_per_1000": 19.8611,
+      "cost_per_1000": 19.8611,
+      "cost_per_day": 993.0556,
+      "reviews_per_day": 50000.0,
+      "review_hours_per_day": 69.4444,
+      "people_needed": 8.6806
+    },
+    "Model alone (reject at 0.04)": {
+      "t_low": 0.04,
+      "t_high": 0.04,
+      "missed_per_1000": 0.0,
+      "false_alarms_per_1000": 9.604,
+      "reviews_per_1000": 0.0,
+      "review_share": 0.0,
+      "error_cost_per_1000": 8.1634,
+      "labour_cost_per_1000": 0.0,
+      "cost_per_1000": 8.1634,
+      "cost_per_day": 408.1683,
+      "reviews_per_day": 0.0,
+      "review_hours_per_day": 0.0,
+      "people_needed": 0.0
+    },
+    "Model + review, cheapest (0.04-0.69)": {
+      "t_low": 0.04,
+      "t_high": 0.69,
+      "missed_per_1000": 0.0,
+      "false_alarms_per_1000": 0.0,
+      "reviews_per_1000": 17.3312,
+      "review_share": 0.0173,
+      "error_cost_per_1000": 0.0,
+      "labour_cost_per_1000": 0.3442,
+      "cost_per_1000": 0.3442,
+      "cost_per_day": 17.2109,
+      "reviews_per_day": 866.5617,
+      "review_hours_per_day": 1.2036,
+      "people_needed": 0.1504
+    },
+    "Model + review, CHOSEN (0.04-0.80)": {
+      "t_low": 0.04,
+      "t_high": 0.8,
+      "missed_per_1000": 0.0,
+      "false_alarms_per_1000": 0.0,
+      "reviews_per_1000": 26.5737,
+      "review_share": 0.0266,
+      "error_cost_per_1000": 0.0,
+      "labour_cost_per_1000": 0.5278,
+      "cost_per_1000": 0.5278,
+      "cost_per_day": 26.3891,
+      "reviews_per_day": 1328.6829,
+      "review_hours_per_day": 1.8454,
+      "people_needed": 0.2307
+    }
+  },
+  "sensitivity_10_seconds": {
+    "model_plus_review_people": 0.461,
+    "model_plus_review_cost_per_day": 52.78,
+    "person_checks_everything_people": 17.36,
+    "person_checks_everything_cost_per_day": 1986.11
+  }
+}
